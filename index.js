@@ -4,7 +4,10 @@ const Path = require("path");
 
 function rewrite(apiPath, extensions, req, next) {
 	const url = req.url.split("?");
-	const b = `${url[0]}/${req.method}`;
+	const id = req.query.id;
+	let b = `${url[0]}/${req.method}`;
+	if(id)
+		b = `${url[0]}/${id}/${req.method}`;
 	const mapped = extensions.some(ext => {
 		const resourcePath = `${b}.${ext}`;
 		const filePath = Path.posix.join(apiPath, resourcePath);
