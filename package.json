@@ -8,10 +8,10 @@
 		"vue",
 		"mocks"
 	],
-	"author": "Maroš Ivančo, update Emmanuel Nelson",
+	"author": "Emmanuel Nelson",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/manuelnelson/vue-cli-plugin-serve-api-mocks.git"
+		"url": "https://github.com/manuelnelson/vue-cli-plugin-serve-api-mocks-id-support.git"
 	}
 }

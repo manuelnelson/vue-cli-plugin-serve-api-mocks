@@ -4,7 +4,7 @@ const Path = require("path");
 
 function rewrite(apiPath, extensions, req, next) {
 	const url = req.url.split("?");
-	const id = req.query.id;
+	const id = Object.keys(req.query).length > 0 ? req.query[Object.keys(req.query)[0]] : null;
 	let b = `${url[0]}/${req.method}`;
 	if(id)
 		b = `${url[0]}/${id}/${req.method}`;
